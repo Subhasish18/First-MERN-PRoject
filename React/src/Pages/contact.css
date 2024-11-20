@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+
+
+.head1 h2{
+    margin: 10px;
+    color: white;
+    font-size: 80px;
+    font-style: bold;
+    padding-left: 8%;
+}
+.container h1{
+    color: white;
+    font-style: bold;
+    margin: 8px;
+    padding: 8px;
+}
+.container p,label{
+    color: white;
+}
+.btn{
+    color: blueviolet;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: rgba(126, 34, 154, 0.677);
+}
