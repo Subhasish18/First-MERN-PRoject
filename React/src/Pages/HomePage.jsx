@@ -31,16 +31,14 @@ const HomePage = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mx-auto mb-4  mg-lg-0">
         <li className="nav-item">
-          <a
-            className="nav-link dropdown-toggle"
-            href="#"
+          <Link className="nav-link dropdown-toggle" to="/products"
             id="navbarDropdownMenuLink"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
           >
             Products
-          </a>
+          </Link>
           <div
             className="dropdown-menu"
             aria-labelledby="navbarDropdownMenuLink"
@@ -63,14 +61,9 @@ const HomePage = () => {
           </div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            On Sale
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link " href="#">
+        <Link className="nav-link " to="/contact">
             Contact Us
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
             <Link className="nav-link " to="/login">
@@ -90,9 +83,9 @@ const HomePage = () => {
             </Link>
         </li>
         <li className="nav-item">
-        <a className="nav-link " href="#">
+        <Link className="nav-link " to="/cart">
               <img src={shopping} height="40px" width="40px" /> Cart
-            </a>
+            </Link>
         </li>
       </ul>
     </div>
