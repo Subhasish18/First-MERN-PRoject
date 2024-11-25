@@ -48,49 +48,13 @@
     font-weight: 900;
     align-items:flex-start;
 }
-#purpur{
-    padding: 15px;
-    border-radius: 15px;
-    background-color: #6606a2;
-    color: white;
-    font-size: 15px;
-}
-.mangi{
-    color: black;
-    padding-top: 50px;
-}
-.mangi button{
-    margin: 0 30px;
-    border: none;
-    font-weight: bold;
-    background-color: unset;
-}
-#support a{
-    font-weight: bold;
-    color: black;
-}
+
 .col {
     text-align: center;
 }
-.pull-right {
-    margin: 0 0 0 auto;
-}
 
-#secmap{
-    width: 100%;
-    height: 100%;
-    background: url('map.jpg');
-    background-position: center;
-    background-size: cover;
-}
 .sec{
     text-align: center;
-}
-.colour{
-    background-color: rgba(71, 9, 147, 0.959);
-}
-.colour2{
-    background-color: rgb(78, 16, 137);
 }
 .col-sm{
     position: relative;
@@ -106,14 +70,7 @@
 	font-size: 17px;
 	color: #a39d9d;
 }
-#lap{
-    width: 100%;
-    height: 400px;
-    background: url('lap.jpg');
-    background-position: center;
-    background-size: cover;
-    opacity: 0.88;
-}
+
 .color{
     position: relative;
 	justify-content: center;
@@ -160,8 +117,4 @@
     background-color: #de2f6c;
     color: white;
     font-size: 15px;
-}
-#TAB{
-    background-color: #e9e4e4;
-    padding: 18px; 
 }

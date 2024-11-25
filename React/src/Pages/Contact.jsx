@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="col-md-6 p-4">
           <div className="bgwht py-2">
             <h1>Contact Us</h1>
-            <p>subhash@gmail.com</p>
+            <p>subhash@gmail.com</p>  
             <p>9875436553</p>
             <p>95,Shantigarh</p>
             <p>Kolkata,700040</p>
@@ -49,8 +49,17 @@ const Contact = () => {
               />
             </div>
             <button type="button" className="btn btn-lg">
-              Large button
+              Submit
             </button>
+            <hr className="my-4" />
+                  <div className="pt-5">
+                    <h6 className="mb-0">
+                    <Link className="nav-link " to="/">
+                        <i className="fas fa-long-arrow-alt-left me-2" />
+                        Back to Home
+                      </Link>
+                    </h6>
+                  </div>
           </div>
         </div>
       </div>

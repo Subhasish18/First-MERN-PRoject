@@ -3,6 +3,7 @@ import './Login.css';
 import auth from '../utils/Firebase';
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { Link } from "react-router-dom";
+import tower from '../assets/tower.png'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -36,7 +37,7 @@ const Login = () => {
         <div className="container">
             <section className="vh-100">
                 <div className="container-fluid h-custom">
-                    <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="row d-flex justify-content-center align-items-center h-100 ">
                         <div className="col-md-9 col-lg-6 col-xl-5">
                             <img
                                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
@@ -119,6 +120,15 @@ const Login = () => {
                                         Don't have an account?{" "}
                                         <Link className="link-danger" to="/register">Register</Link>
                                     </p>
+                                    <hr className="my-4" />
+                  <div className="pt-5">
+                    <h6 className="mb-0">
+                    <Link className="nav-link " to="/">
+                        <i className="fas fa-long-arrow-alt-left me-2" />
+                        Back to Home
+                      </Link>
+                    </h6>
+                  </div>
                                 </div>
                             </form>
                         </div>

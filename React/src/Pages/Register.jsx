@@ -34,7 +34,7 @@ const Register = () => {
   return (
         <>
         <div className="container">
-            <div className="card bg-light">
+            <div className="card card1">
                 <article className="card-body mx-auto" style={{ maxWidth: 400  }}>
                 <h4 className="card-title mt-3 text-center">Create Account</h4>
                 <p className="text-center">Get started with your free account</p>
@@ -50,7 +50,7 @@ const Register = () => {
                 </>
                 }
                 <p className="divider-text">
-                    <span className="bg-light">OR</span>
+                    <span className="bg-dark">OR</span>
                 </p>
                 <form>
                     <div className="form-group input-group">
@@ -148,6 +148,15 @@ const Register = () => {
                             Have an account?{" "}
                         <Link className="link-danger" to="/login">Login</Link>
                     </p>
+                    <hr className="my-4" />
+                  <div className="pt-5">
+                    <h6 className="mb-0">
+                    <Link className="nav-link " to="/">
+                        <i className="fas fa-long-arrow-alt-left me-2" />
+                        Back to Home
+                      </Link>
+                    </h6>
+                  </div>
                 </form>
                 </article>
             </div>

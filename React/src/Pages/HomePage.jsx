@@ -31,7 +31,7 @@ const HomePage = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mx-auto mb-4  mg-lg-0">
         <li className="nav-item">
-          <Link className="nav-link dropdown-toggle" to="/products"
+          <Link className="nav-link" to="/products"
             id="navbarDropdownMenuLink"
             data-toggle="dropdown"
             aria-haspopup="true"
@@ -39,26 +39,6 @@ const HomePage = () => {
           >
             Products
           </Link>
-          <div
-            className="dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <a className="dropdown-item" href="#">
-              Best Sellers
-            </a>
-            <a className="dropdown-item" href="#">
-              Games
-            </a>
-            <a className="dropdown-item" href="#">
-              Consoles
-            </a>
-            <a className="dropdown-item" href="#">
-              Controllers
-            </a>
-            <a className="dropdown-item" href="#">
-              Accessories
-            </a>
-          </div>
         </li>
         <li className="nav-item">
         <Link className="nav-link " to="/contact">
