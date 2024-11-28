@@ -53,7 +53,7 @@ const Register = () => {
                     <span className="bg-dark">OR</span>
                 </p>
                 <form>
-                    <div className="form-group input-group">
+                    {/* <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
                         {" "}
@@ -66,7 +66,7 @@ const Register = () => {
                         placeholder="Full name"
                         type="text"
                     />
-                    </div>
+                    </div> */}
                     <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
@@ -84,7 +84,7 @@ const Register = () => {
                     />
                     </form>
                     </div>
-                    <div className="form-group input-group">
+                    {/* <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
                         {" "}
@@ -103,7 +103,7 @@ const Register = () => {
                         placeholder="Phone number"
                         type="text"
                     />
-                    </div>
+                    </div> */}
                     <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
@@ -121,7 +121,7 @@ const Register = () => {
                     />
                     </form>
                     </div>
-                    <div className="form-group input-group">
+                    {/* <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
                         {" "}
@@ -137,7 +137,7 @@ const Register = () => {
                           required
                     />
                     </form>
-                    </div>
+                    </div> */}
                     <div className="form-group">
                     <button type="submit" className="btn btn-primary btn-block">
                         {" "}
