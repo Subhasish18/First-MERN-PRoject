@@ -3,7 +3,6 @@ import './Login.css';
 import auth from '../utils/Firebase';
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { Link } from "react-router-dom";
-import tower from '../assets/tower.png'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -11,17 +10,16 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
 
     // Handle email login
-    const handleEmailLogIn = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
+    
         try {
-
-
-            await signInWithEmailAndPassword(auth, email, password);
-            alert('User signed in successfully!');
-        } catch (error) {
-            alert(error.message);
+          await signInWithEmailAndPassword(auth, email, password);
+          alert("Login successful!");
+        } catch (err) {
+          setError(err.message);
         }
-    };
+      };
 
     // Handle Google login
     const handleGoogleSignIn = async () => {
@@ -47,7 +45,7 @@ const Login = () => {
                         </div>
                         <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                             {/* Form for Email Login */}
-                            <form onSubmit={handleEmailLogIn}>
+                            <form onSubmit={handleLogin}>
                                 <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                                     <p className="lead fw-normal mb-0 me-3">Log in with</p>
                                     <button
@@ -65,6 +63,7 @@ const Login = () => {
 
                                 {/* Email input */}
                                 <div className="form-outline mb-4">
+                                <form onSubmit={handleLogin}>
                                     <input
                                         type="email"
                                         id="form3Example3"
@@ -75,10 +74,12 @@ const Login = () => {
                                         required
                                     />
                                     <label className="form-label" htmlFor="form3Example3">Email address</label>
+                                    </form>
                                 </div>
 
                                 {/* Password input */}
                                 <div className="form-outline mb-4">
+                                <form onSubmit={handleLogin}>
                                     <input
                                         type="password"
                                         id="form3Example4"
@@ -89,6 +90,7 @@ const Login = () => {
                                         required
                                     />
                                     <label className="form-label" htmlFor="form3Example4">Password</label>
+                                    </form>
                                 </div>
 
                                 <div className="d-flex justify-content-between align-items-center">
@@ -113,6 +115,7 @@ const Login = () => {
                                         type="submit"
                                         className="btn btn-primary btn-lg"
                                         style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+                                        onClick={handleLogin}
                                     >
                                         Login
                                     </button>

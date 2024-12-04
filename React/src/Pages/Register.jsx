@@ -12,17 +12,21 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const provider = new GoogleAuthProvider();
     
-    const handleEmailRegister = async (e) =>{
-        e.preventdefault();
+    const handleRegister = async (e) => {
+        e.preventDefault();
+    
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            alert('User created successfully!');
-        } catch (error) {
-            alert('error.message');
+          await createUserWithEmailAndPassword(auth, email, password);
+          alert("Registration successful!");
+        } catch (err) {
+          setError(err.message);
+          console.log(err);
+          
         }
-    };
+      };
 
     const handleGoogleSignIn = async () => {
+        
         try {
           await signInWithPopup(auth, provider);
           alert('User signed in with Google!');
@@ -53,20 +57,7 @@ const Register = () => {
                     <span className="bg-dark">OR</span>
                 </p>
                 <form>
-                    {/* <div className="form-group input-group">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text">
-                        {" "}
-                        <i className="fa fa-user" />{" "}
-                        </span>
-                    </div>
-                    <input
-                        name="full-name"
-                        className="form-control"
-                        placeholder="Full name"
-                        type="text"
-                    />
-                    </div> */}
+   
                     <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
@@ -74,36 +65,15 @@ const Register = () => {
                         <i className="fa fa-envelope" />{" "}
                         </span>
                     </div>
-                    <form onSubmit={handleEmailRegister}>
-                    <input
-                       type="email"
-                       placeholder="Email"
-                       value={email}
-                       onChange={(e) => setemail(e.target.value)}
-                       required
-                    />
-                    </form>
+                    <form onSubmit={handleRegister}>
+                        <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setemail(e.target.value)}
+                        />
+                        </form>
                     </div>
-                    {/* <div className="form-group input-group">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text">
-                        {" "}
-                        <i className="fa fa-phone" />{" "}
-                        </span>
-                    </div>
-                    <select className="custom-select" style={{ maxWidth: 120 }}>
-                        <option selected="">+91</option>
-                        <option value={1}>+672</option>
-                        <option value={2}>+61</option>
-                        <option value={3}>+1</option>
-                    </select>
-                    <input
-                        name="phone-number"
-                        className="form-control"
-                        placeholder="Phone number"
-                        type="text"
-                    />
-                    </div> */}
                     <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">
@@ -111,35 +81,18 @@ const Register = () => {
                         <i className="fa fa-lock" />{" "}
                         </span>
                     </div>
-                    <form onSubmit={handleEmailRegister}>
+                    <form onSubmit={handleRegister}>
                     <input
-                          type="password"
-                          placeholder="Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          required
-                    />
-                    </form>
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        />
+                        </form>
+                        
                     </div>
-                    {/* <div className="form-group input-group">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text">
-                        {" "}
-                        <i className="fa fa-lock" />{" "}
-                        </span>
-                    </div>
-                    <form onSubmit={handleEmailRegister}>
-                    <input
-                          type="password"
-                          placeholder="Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          required
-                    />
-                    </form>
-                    </div> */}
                     <div className="form-group">
-                    <button type="submit" className="btn btn-primary btn-block">
+                    <button type="submit" className="btn btn-primary btn-block" onClick={handleRegister}>
                         {" "}
                         Create Account
                     </button>
