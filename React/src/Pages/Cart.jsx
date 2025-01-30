@@ -4,15 +4,27 @@ import './Cart.css'
 
 const Cart = () => {
     
-    const [quantity, setQuantity] = useState(1);
+  const [quantities, setQuantities] = useState({
+    1: 1,  // Product 1, starting with quantity 1
+    2: 1,  // Product 2, starting with quantity 1
+    3: 1,  // Product 3, starting with quantity 1
+  });
 
-    const decrement = () => {
-      setQuantity(prevQuantity => Math.max(prevQuantity - 1, 0)); 
-    };
-  
-    const increment = () => {
-      setQuantity(prevQuantity => prevQuantity + 1);
-    };
+  // Handle increment for specific product
+  const increment = (productId) => {
+    setQuantities(prevQuantities => ({
+      ...prevQuantities,
+      [productId]: prevQuantities[productId] + 1,
+    }));
+  };
+
+  // Handle decrement for specific product
+  const decrement = (productId) => {
+    setQuantities(prevQuantities => ({
+      ...prevQuantities,
+      [productId]: Math.max(prevQuantities[productId] - 1, 0),
+    }));
+  };
 
   return (
     <div>
@@ -57,19 +69,21 @@ const Cart = () => {
                             id="form1"
                             min={0}
                             name="quantity"
-                            value={quantity} 
-                            onChange={(e) => setQuantity(Math.max(e.target.value, 0))} 
-                            type="number"
-                            className="form-control form-control-sm"
-                        />
-                        
-                        <button
-                            className="btn btn-link px-2"
-                            onClick={increment}
-                        >
-                            <i className="fas fa-plus" />
-                        </button>
-                        </div>
+                            value={quantities[1]} // Display quantity for product 1
+                              onChange={(e) => setQuantities({
+                                ...quantities,
+                                [1]: Math.max(e.target.value, 0),
+                              })}
+                              type="number"
+                              className="form-control form-control-sm"
+                            />
+                            <button
+                              className="btn btn-link px-2"
+                              onClick={() => increment(1)} // Increase quantity for product 1
+                            >
+                              <i className="fas fa-plus" />
+                            </button>
+                          </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                       <h6 className="mb-0">€ 44.00</h6>
                     </div>
@@ -104,19 +118,21 @@ const Cart = () => {
                             id="form1"
                             min={0}
                             name="quantity"
-                            value={quantity} 
-                            onChange={(e) => setQuantity(Math.max(e.target.value, 0))} 
-                            type="number"
-                            className="form-control form-control-sm"
-                        />
-                        
-                        <button
-                            className="btn btn-link px-2"
-                            onClick={increment}
-                        >
-                            <i className="fas fa-plus" />
-                        </button>
-                        </div>
+                            value={quantities[2]} // Display quantity for product 2
+                              onChange={(e) => setQuantities({
+                                ...quantities,
+                                [2]: Math.max(e.target.value, 0),
+                              })}
+                              type="number"
+                              className="form-control form-control-sm"
+                            />
+                            <button
+                              className="btn btn-link px-2"
+                              onClick={() => increment(2)} // Increase quantity for product 2
+                            >
+                              <i className="fas fa-plus" />
+                            </button>
+                          </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                       <h6 className="mb-0">€ 44.00</h6>
                     </div>
@@ -151,18 +167,20 @@ const Cart = () => {
                             id="form1"
                             min={0}
                             name="quantity"
-                            value={quantity} 
-                            onChange={(e) => setQuantity(Math.max(e.target.value, 0))} 
+                            value={quantities[3]} // Display quantity for product 3
+                            onChange={(e) => setQuantities({
+                              ...quantities,
+                              [3]: Math.max(e.target.value, 0),
+                            })}
                             type="number"
                             className="form-control form-control-sm"
-                        />
-                        
-                        <button
+                          />
+                          <button
                             className="btn btn-link px-2"
-                            onClick={increment}
-                        >
+                            onClick={() => increment(3)} // Increase quantity for product 3
+                          >
                             <i className="fas fa-plus" />
-                        </button>
+                          </button>
                         </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                       <h6 className="mb-0">€ 44.00</h6>
