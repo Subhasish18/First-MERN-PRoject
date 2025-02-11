@@ -1,8 +1,6 @@
 import Cart from '../model/CartModel.js';
 
 
-
-
 export const getAllCarts = async (req, res) => {
     console.log('Cart Data Posted')
     const cartrsave= new Cart({

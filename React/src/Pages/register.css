@@ -1,32 +1,162 @@
-.card1{
-    background: black;
-}
-
-.divider-text {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Light background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Register Container */
+  .container {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  /* Card Background */
+  .card1 {
+    background: #f4f7fc; /* Soft light background */
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Google Sign-in Button */
+  .btn-google {
+    background-color: #405D9D;
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn-google:hover {
+    background-color: #3a4f7a; /* Slightly darker shade */
+  }
+  
+  .btn-google i {
+    margin-right: 10px;
+  }
+  
+  /* Divider Text */
+  .divider-text {
     position: relative;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-    }
-    
-    .divider-text span {
+  }
+  
+  .divider-text span {
     padding: 7px;
     font-size: 12px;
-    position: relative;   
+    position: relative;
     z-index: 2;
-    }
-    
-    .divider-text:after {
+  }
+  
+  .divider-text:after {
     content: "";
-    position: flex;
+    position: absolute;
     width: 100%;
     border-bottom: 1px solid #ddd;
-    top: 55%;
+    top: 50%;
     left: 0;
     z-index: 1;
+  }
+  
+  /* Form Inputs */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f9f9f9;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #fff;
+  }
+  
+  /* Form Submit Button */
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Small Screen Adjustments */
+  @media (max-width: 450px) {
+    .container {
+      padding: 20px;
     }
-    
-    .btn-google {
-    background-color: #405D9D;
-    color: #fff;
+  
+    .card1 {
+      padding: 15px;
     }
+  }
+  

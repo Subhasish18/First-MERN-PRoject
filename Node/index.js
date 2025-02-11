@@ -5,7 +5,7 @@ import CartRoute from "./route/CartRoute.js";
 import {connectDB} from "./db.js";
 import bodyParser from 'body-parser';
 import cors from 'cors'
-
+import UserRoute from "./route/UserRoute.js";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use("/api/products",productRoutes);
 app.use("/api/carts",CartRoute);
-
+app.use("/api/users",UserRoute);
 
 // Start the server
 app.listen(5000,() =>{

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './products.css'
+// import './products.css'
 import blue from '../assets/blue.jpg'
 import head from '../assets/head.jpg'
 import play from '../assets/play.jpg'

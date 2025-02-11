@@ -1,15 +1,116 @@
-.divider:after,
-.divider:before {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #eee;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.h-custom {
-  height: calc(100% - 73px);
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
-@media (max-width: 450px) {
-  .h-custom {
-    height: 100%;
-  }
+
+p {
+  color: #777;
+  text-align: center;
+  font-size: 14px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Login Container */
+.login-container {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Input Styles */
+.input-container {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Google Button */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-btn i {
+  margin-right: 10px;
+}
+
+.google-btn:hover {
+  background-color: #c1351d;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Footer Links */
+.footer-links {
+  margin-top: 20px;
+  text-align: center;
 }
